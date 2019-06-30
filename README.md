@@ -9,7 +9,7 @@ There are three types of offers: buy-one-get-one (BOGO), discount, and informati
 My task is to figure out which demographics complete the offers and why. What are the offer completion patterns per offer across the demographics.
 
 ## Data Munging
-The greatest difficulty I encounted when manipulating the data was to figure out how to track truly completed offer, offers that were viewed prior to completion. The most challenging aspect of this was how to track when transactions had occurred after informational offers were viewed. 
+The greatest difficulty I encounted when manipulating the data was to figure out how to track a truly completed offer, offers that were viewed prior to completion. The most challenging aspect of this was how to track offer completions for informational offers, when transactions had occurred after informational offers were viewed but prior to the end of the offer availability. 
 
 ## Follow Up Questions
 If I had more time I would explore how to build a recommendation engine that recommends an initial offer when a user first becomes a member based on demographic data, determines which offer to recommend when a user either does or does not complete an offer, as well as determines the best channel to send an offer for each demographic.
