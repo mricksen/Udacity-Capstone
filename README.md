@@ -1,10 +1,18 @@
 # Udacity Data Science Capstone
 
 ## The Influence of Starbucks Promotional Offers on Buyer Behaviour
-•	There are three types of offers that can be sent: buy-one-get-one (BOGO), discount, and informational. In a BOGO offer, a user needs to spend a certain amount to get a reward equal to that threshold amount. In a discount, a user gains a reward equal to a fraction of the amount spent. In an informational offer, there is no reward, but neither is there a requisite amount that the user is expected to spend. Offers can be delivered via multiple channels.
+The Starbucks promotional offers capstone project provides a dataset that allows us to track member behavior and interactions with offers. 
+
+There are three types of offers: buy-one-get-one (BOGO), discount, and informational. In a BOGO offer, a user needs to spend a certain amount to get a reward equal to that threshold amount. In a discount, a user gains a reward equal to a fraction of the amount spent. In an informational offer, there is no reward, but neither is there a requisite amount that the user is expected to spend. Offers can be delivered via multiple channels.
 
 ## Problem Statement
-Which demographics of users responds to each type of offer?
+My task is to figure out which demographics complete the offers and why. What are the offer completion patterns per offer across the demographics.
+
+## Data Munging
+The greatest difficulty I encounted when manipulating the data was to figure out how to track truly completed offer, offers that were viewed prior to completion. The most challenging aspect of this was how to track when transactions had occurred after informational offers were viewed. 
+
+## Follow Up Questions
+If I had more time I would explore how to build a recommendation engine that recommends an initial offer when a user first becomes a member based on demographic data, determines which offer to recommend when a user either does or does not complete an offer, as well as determines the best channel to send an offer for each demographic.
 
 ## Data Dictionary
 ### profile.json
