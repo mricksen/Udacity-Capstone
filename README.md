@@ -43,3 +43,5 @@ Event log (306648 events x 4 fields)
 - time: (numeric) hours after start of test
 
 
+## Acknowledgements
+I want to thank Starbucks for providing the simulated experiemental data for the capstone project.
