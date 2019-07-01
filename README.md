@@ -6,7 +6,7 @@ The Starbucks promotional offers capstone project provides a dataset that allows
 There are three types of offers: buy-one-get-one (BOGO), discount, and informational. In a BOGO offer, a user needs to spend a certain amount to get a reward equal to that threshold amount. In a discount, a user gains a reward equal to a fraction of the amount spent. In an informational offer, there is no reward, but neither is there a requisite amount that the user is expected to spend. Offers can be delivered via multiple channels.
 
 ## Problem Statement
-My task is to figure out which demographics complete the offers and why. What are the offer completion patterns per offer across the demographics.
+The basic task is to use the data to identify which groups of people are most responsive to each type of offer, and how best to present each type of offer.
 
 ## Data Munging
 The greatest difficulty I encounted when manipulating the data was to figure out how to track a truly completed offer, offers that were viewed prior to completion. The most challenging aspect of this was how to track offer completions for informational offers, when transactions had occurred after informational offers were viewed but prior to the end of the offer availability. 
@@ -41,3 +41,5 @@ Event log (306648 events x 4 fields)
 - amount: (numeric) money spent in "transaction"
 - reward: (numeric) money gained from "offer completed"
 - time: (numeric) hours after start of test
+
+
