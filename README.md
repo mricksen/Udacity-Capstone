@@ -11,7 +11,7 @@ The basic task is to use the data to identify which groups of people are most re
 In the notebook, I first looked at the data I was working with and determined that I would need to create a dataframe to track for each user which offers did they complete and figure out a way to track completions for the information offers that didn't provide the offer completion event. Once created I can look at different facets of the demographic data to understand which offers are successes and which ones are failures with an understanding as to the effect that channel plays in offer completion rates. 
 
 ## Results
-My results are written up in this blog post: 
+My results are written up in this blog post: https://medium.com/@mricksen/starbucks-promotional-offers-demographic-analysis-7ff5d1839391
 
 ## Data Munging
 The greatest difficulty I encounted when manipulating the data was to figure out how to track a truly completed offer, offers that were viewed prior to completion. The most challenging aspect of this was how to track offer completions for informational offers, when transactions had occurred after informational offers were viewed but prior to the end of the offer availability. 
