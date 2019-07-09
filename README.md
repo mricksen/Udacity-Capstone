@@ -8,12 +8,17 @@ There are three types of offers: buy-one-get-one (BOGO), discount, and informati
 ## Problem Statement
 The basic task is to use the data to identify which groups of people are most responsive to each type of offer, and how best to present each type of offer.
 
-In the notebook, I first looked at the data I was working with and determined that I would need to create a dataframe to track for each user which offers did they complete and figure out a way to track completions for the information offers that didn't provide the offer completion event. Once created I can look at different facets of the demographic data to understand which offers are successes and which ones are failures with an understanding as to the effect that channel plays in offer completion rates. 
+How I plan to solve this task is to create a labeled data set of users who have viewed an offer and completed it or did not complete it. I could have looked at other data sets of users like those that receive an offer, don't view it and complete it; as well as, users who receive an offer don't view it and don't complete it. 
+
+I created a model per offer as there was variations amongst the offers I didn't want to lose by aggregating them together in offer groups (BOGO, discount, informational) such as the channels in which the offers were sent. 
+
+## Metrics
+I plan to use F1 score as my main measure after initially using accuracy. The reason why I think F1 is a better measure is that it accounts for precision and recall. This is relevant as we want to account for the prediction mistakes which accuracy does not provide as the model is doing a binary classification: "will the user completed the order or not after viewing it?"
 
 ## Results
 My results are written up in this blog post: https://medium.com/@mricksen/starbucks-promotional-offers-demographic-analysis-7ff5d1839391
 
-## Data Munging
+## Data Cleaning
 The greatest difficulty I encounted when manipulating the data was to figure out how to track a truly completed offer, offers that were viewed prior to completion. The most challenging aspect of this was how to track offer completions for informational offers, when transactions had occurred after informational offers were viewed but prior to the end of the offer availability. 
 
 ## Follow Up Questions
