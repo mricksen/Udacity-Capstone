@@ -8,9 +8,11 @@ There are three types of offers: buy-one-get-one (BOGO), discount, and informati
 ## Problem Statement
 The basic task is to use the data to identify which groups of people are most responsive to each type of offer, and how best to present each type of offer.
 
-How I plan to solve this task is to create a labeled data set of users who have viewed an offer and completed it or did not complete it. I could have looked at other data sets of users like those that receive an offer, don't view it and complete it; as well as, users who receive an offer don't view it and don't complete it. 
+How I plan to solve this task is to create a labeled data set of users who have viewed an offer and did or did not completed it. I could have looked at other data sets of users like those that receive an offer, don't view it and complete it; as well as, users who receive an offer don't view it and don't complete it. 
 
 I created a model per offer as there was variations amongst the offers I didn't want to lose by aggregating them together in offer groups (BOGO, discount, informational) such as the channels in which the offers were sent. 
+
+The solution I was pursuing was creating a model that would predict what type of user would or would not complete the offer based on the demographic information available. The goal would be to send the offer to those likely to complete it and don't send the offer to those not likely to complete it. 
 
 ## Metrics
 I plan to use F1 score as my main measure after initially using accuracy. The reason why I think F1 is a better measure is that it accounts for precision and recall. This is relevant as we want to account for the prediction mistakes which accuracy does not provide as the model is doing a binary classification: "will the user completed the order or not after viewing it?"
