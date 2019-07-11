@@ -26,7 +26,7 @@ F1 = 2 * (precision * recall / precision + recall)
 As a quick reminder… precision is the correct number of True Positive labels divided by the total number of positive labels (True and False Positives). While recall is the correct number of True Positive labels divided by the total number of relevant elements (True Positive and False Negative). In other words, recall calculates how well we correctly identify the Positive labels as True. 
 
 For my dataset there is a discrepancy in the number of viewed offers completed by users so I believe F1 is the better metric in this case.
-
+![](Images/Image%202019-07-10%20at%207.10.19%20PM.png)
 
 
 ## Data Cleaning
@@ -38,11 +38,16 @@ I created a unique model per offer to make sure I accounted for the uniqueness o
 While I did not reach my goal of an F1 score of .75 for each model I got fairly close to it. The only two offer models where I didn't succeed were the two informational offers. I would suggest to Starbucks that they figure out how to track offer completions than just transactions influenced by offers by tracking if the informational offer such as a pumpkin spiced latte was actually purchased by the use after viewing the offer. 
 
 ## Model Results
-I printed out the accuracy, F1 score and confusion matrix for each model's prediction on the training data. Every model had days a member as the most important feature to predict offer completion. There were three offer models (0,1 and 7) where income was as important as the days a member feature.
-![GitHub Logo](/Downloads/Image 2019-07-10 at 6.57.30 PM.png)
+I printed out the accuracy, F1 score and feature importance for each model's prediction on the training data. Every model had days a member as the most important feature to predict offer completion. There were three offer models (0,1 and 7) where income was also a very important feature. Below you can see examples from the model results for offers 0 and 1.
+
+![](Images/Image%202019-07-10%20at%206.57.30%20PM.png)
 
 ## Conclusion
-The problem I was tyring to understand was what users would complete an offer after viewing it. My first approach was to try to build a set of heuristics about who completes which offers. I then decided I would try to build a set of models to try to predict which users would or would not complete an offer after viewing it. I created a model for each offer to retain the unique parameters for the offers. I started off with a simple logistic regression model and tried to improve upon those results using a random forest classifier using GridSearchCV. The feature_importances_ parameter made it quite clear and confirmed the importance of days a member of the starbucks rewards program that I saw when analyzing how the various demographhics affected the offer completion rates.
+The problem I was tyring to understand was what users would complete an offer after viewing it. 
+
+My first approach was to try to build a set of heuristics about who completes which offers. 
+
+I then decided I would try to build a set of models to try to predict which users would or would not complete an offer after viewing it. I created a model for each offer to retain the unique parameters for the offers. I started off with a simple logistic regression model and tried to improve upon those results using a random forest classifier using GridSearchCV. The feature_importances_ parameter made it quite clear and confirmed the importance of days a member of the starbucks rewards program that I saw when analyzing how the various demographics affected the offer completion rates.
 
 My results are written up in this blog post: https://medium.com/@mricksen/starbucks-promotional-offers-demographic-analysis-7ff5d1839391
 
