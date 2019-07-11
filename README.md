@@ -25,7 +25,8 @@ F1 = 2 * (precision * recall / precision + recall)
 
 As a quick reminder… precision is the correct number of True Positive labels divided by the total number of positive labels (True and False Positives). While recall is the correct number of True Positive labels divided by the total number of relevant elements (True Positive and False Negative). In other words, recall calculates how well we correctly identify the Positive labels as True. 
 
-For my dataset there is a discrepancy in the number of viewed offers completed by users so I believe F1 is the better metric in this case.
+For my dataset there is a discrepancy in the number of viewed offers completed by users so I believe F1 is the better metric in this case. See the discrepancies in the % completion rates below:
+
 ![](Images/Image%202019-07-10%20at%207.10.19%20PM.png)
 
 
