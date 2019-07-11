@@ -39,7 +39,7 @@ While I did not reach my goal of an F1 score of .75 for each model I got fairly 
 
 ## Model Results
 I printed out the accuracy, F1 score and confusion matrix for each model's prediction on the training data. Every model had days a member as the most important feature to predict offer completion. There were three offer models (0,1 and 7) where income was as important as the days a member feature.
-![GitHub Logo](/Downloads/Image 2019-07-10 at 6.57.30 PM.png)
+
 
 ## Conclusion
 The problem I was tyring to understand was what users would complete an offer after viewing it. My first approach was to try to build a set of heuristics about who completes which offers. I then decided I would try to build a set of models to try to predict which users would or would not complete an offer after viewing it. I created a model for each offer to retain the unique parameters for the offers. I started off with a simple logistic regression model and tried to improve upon those results using a random forest classifier using GridSearchCV. The feature_importances_ parameter made it quite clear and confirmed the importance of days a member of the starbucks rewards program that I saw when analyzing how the various demographhics affected the offer completion rates.
