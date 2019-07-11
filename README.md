@@ -41,13 +41,14 @@ While I did not reach my goal of an F1 score of .75 for each model I got fairly 
 I printed out the accuracy, F1 score and confusion matrix for each model's prediction on the training data. You can see the results below:
 
 offer_0 
- Logistic Regression 
-  (0.6036602802402059, 0.72391505078485685) 
-  Random Forest Classifier 
-  (0.98198455819273667, 0.71753846153846157) 
-  GridSearch Random Forest Classifier Best results 
-  (0.75207320560480406, 0.78534290666006434,                
-  importance
+
+Logistic Regression 
+(0.6036602802402059, 0.72391505078485685) 
+Random Forest Classifier 
+(0.98198455819273667, 0.71753846153846157) 
+GridSearch Random Forest Classifier Best results 
+(0.75207320560480406, 0.78534290666006434,                
+importance
 days_a_member    0.457730
 income           0.323266
 gender_M         0.084154
