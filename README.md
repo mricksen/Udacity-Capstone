@@ -50,10 +50,12 @@ My first approach was to try to build a set of heuristics about who completes wh
 
 I then decided I would try to build a set of models to try to predict which users would or would not complete an offer after viewing it. I created a model for each offer to retain the unique parameters for the offers. I started off with a simple logistic regression model and tried to improve upon those results using a random forest classifier using GridSearchCV. The feature_importances_ parameter made it quite clear and confirmed the importance of days a member of the starbucks rewards program that I saw when analyzing how the various demographics affected the offer completion rates.
 
+Most models performed at the F1 score I was trying to achieve for each model of .75 and I learned for each model how the feature importances fluctuate across the few features I used in the model (age, income, gender, and days a member).
+
 My results are written up in this blog post: https://medium.com/@mricksen/starbucks-promotional-offers-demographic-analysis-7ff5d1839391
 
 ## Improvements
-If I had more time I would explore how to build a recommendation engine that recommends an initial offer when a user first becomes a member based on demographic data, determine which offer to recommend when a user either does or does not complete an offer, as well as determines the best channel to send an offer for each demographic.
+If I had more time I would explore how to build a recommendation engine that recommends an initial offer when a user first becomes a member based on demographic data, determine which offer to recommend when a user either does or does not complete an offer, as well as determine the best channel to send an offer for each demographic.
 
 This was simulated data from starbucks but I hope that they include through which channel the offer was viewed as that information would be valuable to understanding how users interact with offers and how it may influence completion rates.
 
