@@ -8,7 +8,7 @@ There are three types of offers: buy-one-get-one (BOGO), discount, and informati
 ## Problem Statement
 The basic task is to use the data to identify which groups of people are most responsive to each type of offer, and how best to present each type of offer.
 
-How I plan to solve this task is to create a labeled data set of users who have viewed an offer and did or did not complete it. I could have looked at other data sets of users like those that receive an offer, don't view it and complete it; as well as, users who receive an offer don't view it and don't complete it. 
+How I plan to solve this task is to create a labeled data set of users who have viewed an offer and did or did not complete it. There were other way to look at the data such as, I could have looked at other data sets of users like those that receive an offer, don't view it and complete it; as well as, users who receive an offer don't view it and don't complete it. 
 
 I created a model per offer as there was variations amongst the offers I didn't want to lose by aggregating them together in offer groups (BOGO, discount, informational) such as the channels in which the offers were sent. 
 
@@ -34,19 +34,19 @@ For my dataset there is a discrepancy in the number of viewed offers completed b
 The greatest difficulty I encounted when manipulating the data was to figure out how to track a truly completed offer, offers that were viewed prior to completion. The most challenging aspect of this was how to track offer completions for informational offers, when transactions had occurred after informational offers were viewed but prior to the end of the offer availability. 
 
 ## Building a Prediction Model
-I created a unique model per offer to make sure I accounted for the uniqueness of each model. I created three models a logistic regression, random forest classifier and an improved random forest classifier using GridSearchCV. I chose logistic regression as the first model as I create a binary classification dataset either a users completed an offer after viewing it or they did not. I then chose to use a random forest classifier as it would provide me with a clearer sense for which features were most relevant through the feature_importances_ attribute. GridSearchCV helped me find the best parameters to use for each offer model. 
+I created a unique model per offer to make sure I accounted for the uniqueness of each model. I created three models: a logistic regression, random forest classifier and an improved random forest classifier using GridSearchCV. I chose logistic regression as the first model as I create a binary classification dataset either a users completed an offer after viewing it or they did not. I then chose to use a random forest classifier as it would provide me with a clearer sense for which features were most relevant through the feature_importances_ attribute. GridSearchCV helped me find the best parameters to use for each offer model. 
 
-While I did not reach my goal of an F1 score of .75 for each model I got fairly close to it. The only two offer models where I didn't succeed were the two informational offers. I would suggest to Starbucks that they figure out how to track offer completions than just transactions influenced by offers by tracking if the informational offer such as a pumpkin spiced latte was actually purchased by the use after viewing the offer. 
+While I did not reach my goal of an F1 score of .75 for each model I got fairly close to it. The only two offer models where I didn't succeed were the two informational offers. I would suggest to Starbucks that they figure out how to track offer completions rather than just transactions influenced by offers, by tracking if the informational offer such as a pumpkin spiced latte was actually purchased by the user after viewing the offer. 
 
 ## Model Results
-I printed out the accuracy, F1 score and feature importance for each model's prediction on the training data. Every model had days a member as the most important feature to predict offer completion. There were three offer models (0,1 and 7) where income was also a very important feature. Below you can see examples from the model results for offers 0 and 1.
+I printed out the accuracy, F1 score, and feature importance for each model's prediction on the training data. Every model had days a member as the most important feature to predict offer completion. There were three offer models (0,1 and 7) where income was also a very important feature. Below you can see examples from the model results for offers 0 and 1.
 
 ![](Images/Image%202019-07-10%20at%206.57.30%20PM.png)
 
 ## Conclusion
-The problem I was tyring to understand was what users would complete an offer after viewing it. 
+The problem I was trying to understand was which user demographics would complete an offer after viewing it. 
 
-My first approach was to try to build a set of heuristics about who completes which offers. 
+My first approach was to try to build a set of heuristics about who completes each offer. 
 
 I then decided I would try to build a set of models to try to predict which users would or would not complete an offer after viewing it. I created a model for each offer to retain the unique parameters for the offers. I started off with a simple logistic regression model and tried to improve upon those results using a random forest classifier using GridSearchCV. The feature_importances_ parameter made it quite clear and confirmed the importance of days a member of the starbucks rewards program that I saw when analyzing how the various demographics affected the offer completion rates.
 
